@@ -143,12 +143,13 @@ th {
 }
 
 .help-figure-row .help-figure img {
-  align-self: end;
+  align-self: start;
 }
 
 .help-figure-row .help-figure figcaption {
   font-size: 0.7rem;
   line-height: 1.35;
+  align-self: end;
 }
 
 a {
