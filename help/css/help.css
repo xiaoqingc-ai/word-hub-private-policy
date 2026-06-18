@@ -115,6 +115,29 @@ th {
   text-align: center;
 }
 
+.help-figure-row {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.help-figure-row--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.help-figure-row--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.help-figure-row .help-figure {
+  margin: 0;
+}
+
+.help-figure-row .help-figure figcaption {
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+
 a {
   color: #007aff;
   text-decoration: none;
