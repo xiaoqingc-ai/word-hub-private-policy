@@ -115,6 +115,15 @@ th {
   text-align: center;
 }
 
+a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+a:active {
+  opacity: 0.7;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     color: #f0f0f0;
@@ -148,5 +157,9 @@ th {
 
   .help-figure figcaption {
     color: #aaa;
+  }
+
+  a {
+    color: #409cff;
   }
 }
