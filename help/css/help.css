@@ -119,18 +119,31 @@ th {
   display: grid;
   gap: 0.5rem;
   margin: 1rem 0;
+  align-items: stretch;
 }
 
 .help-figure-row--3 {
   grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .help-figure-row--2 {
   grid-template-columns: repeat(2, 1fr);
+  margin-top: 0;
 }
 
 .help-figure-row .help-figure {
   margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 0;
+  height: 100%;
+}
+
+.help-figure-row .help-figure img {
+  align-self: end;
 }
 
 .help-figure-row .help-figure figcaption {
@@ -196,5 +209,9 @@ td .help-figure figcaption {
 
   a {
     color: #409cff;
+  }
+
+  .help-figure-row--3 {
+    border-bottom-color: #333;
   }
 }
