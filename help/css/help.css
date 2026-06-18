@@ -124,6 +124,18 @@ a:active {
   opacity: 0.7;
 }
 
+.table-figure {
+  margin: 0;
+}
+
+.table-figure img {
+  margin: 0;
+}
+
+td .help-figure figcaption {
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     color: #f0f0f0;
