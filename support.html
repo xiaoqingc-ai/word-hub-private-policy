@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>支持与帮助 - WordHub·华文词汇</title>
+  <meta name="description" content="WordHub·华文词汇官方支持页面。查看常见问题，或通过邮件联系客服获取帮助。" />
+  <meta name="robots" content="index, follow" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --surface: #f5f5f7;
+      --surface-elevated: #fafafa;
+      --text: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --accent: #0071e3;
+      --accent-hover: #0077ed;
+      --border: #d2d2d7;
+      --radius: 14px;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
+      --max-width: 640px;
+      --sticky-bar-height: 64px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-text-size-adjust: 100%;
+      padding-bottom: calc(var(--sticky-bar-height) + 16px);
+    }
+
+    @media (min-width: 641px) {
+      body {
+        padding-bottom: 40px;
+      }
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px 20px 0;
+    }
+
+    /* Header */
+    .site-header {
+      text-align: center;
+      padding: 8px 0 28px;
+    }
+
+    .site-header h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 8px;
+      line-height: 1.25;
+    }
+
+    .site-header p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .section-subtitle {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      margin: -8px 0 16px;
+    }
+
+    /* Contact Hero */
+    .contact-hero {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-hero .icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 16px;
+      background: var(--bg);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .contact-hero h2 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+
+    .contact-hero .hint {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin: 0 0 20px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 28px;
+      background: var(--accent);
+      color: #fff !important;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 980px;
+      text-decoration: none !important;
+      transition: background 0.15s ease;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      text-decoration: none !important;
+    }
+
+    .email-link {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 0.9375rem;
+      word-break: break-all;
+    }
+
+    .response-time {
+      margin-top: 12px;
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+    }
+
+    /* Help Center */
+    .help-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .help-list li {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .help-list li:last-child {
+      border-bottom: none;
+    }
+
+    .help-list a {
+      display: block;
+      padding: 14px 16px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      transition: background 0.12s ease;
+    }
+
+    .help-list a:hover {
+      background: var(--surface);
+      text-decoration: none;
+    }
+
+    .help-list a::after {
+      content: " ›";
+      color: var(--text-secondary);
+      float: right;
+    }
+
+    .help-escalation {
+      margin-top: 12px;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+
+    /* FAQ Accordion */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .faq-item {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 16px 44px 16px 16px;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+      user-select: none;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      transition: transform 0.2s ease;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-item .answer {
+      padding: 0 16px 16px;
+      font-size: 0.9375rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .faq-item .answer p {
+      margin: 0 0 12px;
+    }
+
+    .faq-item .answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-item .answer ol {
+      margin: 0 0 12px;
+      padding-left: 1.25rem;
+    }
+
+    .faq-item .answer li {
+      margin-bottom: 6px;
+    }
+
+    .faq-escalation {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 0.875rem;
+    }
+
+    .faq-escalation a {
+      font-weight: 500;
+    }
+
+    /* Repeat Contact */
+    .contact-repeat {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-repeat h2 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+
+    .contact-repeat p {
+      margin: 0 0 16px;
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+    }
+
+    /* Footer */
+    .site-footer {
+      text-align: center;
+      padding: 32px 20px 24px;
+      border-top: 1px solid var(--border);
+      margin-top: 16px;
+      color: var(--text-secondary);
+      font-size: 0.8125rem;
+    }
+
+    .site-footer p {
+      margin: 0 0 8px;
+    }
+
+    .site-footer a {
+      color: var(--accent);
+    }
+
+    /* Sticky mobile bar */
+    .sticky-contact {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      padding: 10px 16px;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+    }
+
+    .sticky-contact .btn-primary {
+      max-width: var(--max-width);
+      width: 100%;
+      min-height: 44px;
+      font-size: 0.9375rem;
+    }
+
+    @media (min-width: 641px) {
+      .sticky-contact {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const APP_NAME = "WordHub·华文词汇";
+    const SUPPORT_EMAIL = "admin@studywiseai.com";
+    const PRIVACY_URL = "https://xiaoqingc-ai.github.io/word-hub-private-policy/index.html";
+
+    const HELP_ARTICLES = [
+      { title: "如何添加课程", url: "help/add-course.html" },
+      { title: "词汇学习三步法：卡片 · 听写 · 运用", url: "help/vocab-three-steps.html" },
+      { title: "为什么要设置学习档案", url: "help/why-learning-profile.html" },
+      { title: "我有多个孩子，如何为他们设置不同的学习档案", url: "help/multi-child-profiles.html" },
+      { title: "【复习】和【考点】·【复习计划】有什么不同", url: "help/review-vs-exam-plan.html" }
+    ];
+
+    function buildMailto() {
+      const subject = encodeURIComponent("[" + APP_NAME + "] 需要帮助");
+      const body = encodeURIComponent(
+        "您好，\n\n" +
+        "我在使用 " + APP_NAME + " 时遇到问题，希望得到帮助。\n\n" +
+        "【设备信息】\n" +
+        "设备型号：（请填写，例如 iPhone 15）\n" +
+        "iOS 版本：（请填写，例如 iOS 18.0）\n\n" +
+        "【问题描述】\n" +
+        "（请详细描述您遇到的问题）\n\n" +
+        "谢谢！"
+      );
+      return "mailto:" + SUPPORT_EMAIL + "?subject=" + subject + "&body=" + body;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const mailto = buildMailto();
+
+      document.querySelectorAll("[data-app-name]").forEach(function (el) {
+        el.textContent = APP_NAME;
+      });
+
+      document.querySelectorAll("[data-support-email]").forEach(function (el) {
+        el.textContent = SUPPORT_EMAIL;
+      });
+
+      document.querySelectorAll("[data-mailto]").forEach(function (el) {
+        el.href = mailto;
+      });
+
+      document.querySelectorAll("[data-privacy-url]").forEach(function (el) {
+        el.href = PRIVACY_URL;
+      });
+
+      document.querySelectorAll("[data-copyright-year]").forEach(function (el) {
+        el.textContent = new Date().getFullYear();
+      });
+
+      const helpList = document.getElementById("help-list");
+      if (helpList) {
+        HELP_ARTICLES.forEach(function (article) {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = article.url;
+          a.textContent = article.title;
+          li.appendChild(a);
+          helpList.appendChild(li);
+        });
+      }
+    });
+  </script>
+
+  <div class="page">
+    <header class="site-header">
+      <h1 data-app-name>WordHub·华文词汇</h1>
+      <p>华文词汇学习 App 的官方支持与常见问题页面</p>
+    </header>
+
+    <main>
+      <section class="contact-hero" aria-labelledby="contact-heading">
+        <div class="icon" aria-hidden="true">✉️</div>
+        <h2 id="contact-heading">联系客服</h2>
+        <p class="hint">遇到问题？我们随时为您提供帮助</p>
+        <a class="btn-primary" data-mailto href="#">发送邮件联系客服</a>
+        <br />
+        <a class="email-link" data-mailto href="#"><span data-support-email>admin@studywiseai.com</span></a>
+        <p class="response-time">我们通常会在 1–3 个工作日内回复</p>
+      </section>
+
+      <section aria-labelledby="help-heading">
+        <h2 class="section-title" id="help-heading">帮助中心</h2>
+        <p class="section-subtitle">以下指南可能帮您快速解决问题</p>
+        <ul class="help-list" id="help-list"></ul>
+        <p class="help-escalation">未能解决？请<a data-mailto href="#">直接发邮件联系我们</a>。</p>
+      </section>
+
+      <section aria-labelledby="faq-heading">
+        <h2 class="section-title" id="faq-heading">常见问题</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>如何恢复订阅？</summary>
+            <div class="answer">
+              <p>如果您已购买 Pro 订阅但 App 内未显示，请尝试以下方式恢复：</p>
+              <ol>
+                <li>打开 App，进入<strong>设置</strong>，点击<strong>恢复购买</strong>。</li>
+                <li>或在订阅页面点击<strong>恢复购买</strong>。</li>
+                <li>请确保使用的是购买时的<strong>同一 Apple ID</strong>登录 App Store。</li>
+              </ol>
+              <p>恢复完成后，Pro 功能应会自动解锁。若仍无法恢复，请联系我们并提供购买凭证截图。</p>
+              <p class="faq-escalation"><a data-mailto href="#">仍有问题？联系我们 →</a></p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>如何升级 Pro？</summary>
+            <div class="answer">
+              <p>Pro 订阅可在 App 内通过 Apple 应用内购买完成：</p>
+              <ol>
+                <li>当使用需要 Pro 的功能时，App 会弹出订阅页面。</li>
+                <li>选择年度或月度订阅方案，按提示完成 Apple 支付确认。</li>
+                <li>购买成功后，Pro 功能会立即生效。</li>
+              </ol>
+              <p>订阅管理（查看、取消或更改方案）请前往 iPhone/iPad 的<strong>设置 → Apple ID → 订阅</strong>。</p>
+              <p class="faq-escalation"><a data-mailto href="#">仍有问题？联系我们 →</a></p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>为什么数据没有同步？</summary>
+            <div class="answer">
+              <p><span data-app-name>WordHub·华文词汇</span>的学习数据（包括词汇进度、练习记录、学习档案等）均<strong>保存在您的设备本地</strong>，不会上传到云端，也不提供跨设备自动同步。</p>
+              <p>因此：</p>
+              <ul>
+                <li>更换设备或重新安装 App 后，本地学习数据可能无法保留。</li>
+                <li>同一设备上的多个学习档案数据也仅存储在本机。</li>
+              </ul>
+              <p>这是 App 当前的设计方式，我们会在未来版本中评估是否需要增加备份或同步功能。如有数据迁移方面的具体需求，欢迎联系我们。</p>
+              <p class="faq-escalation"><a data-mailto href="#">仍有问题？联系我们 →</a></p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>如何删除学习档案或清除本地数据？</summary>
+            <div class="answer">
+              <p><span data-app-name>WordHub·华文词汇</span>不需要注册账号，所有数据均保存在设备本地。如需删除数据：</p>
+              <ol>
+                <li><strong>删除单个学习档案</strong>：进入<strong>设置 → 学习档案</strong>，左滑或点击档案进入详情后删除。删除后该档案的学习进度将无法恢复。</li>
+                <li><strong>清除全部 App 数据</strong>：从设备上卸载 App，即可清除所有本地学习数据。</li>
+              </ol>
+              <p>由于无云端账号，卸载 App 后数据无法通过账号找回。如有疑问请联系我们。</p>
+              <p class="faq-escalation"><a data-mailto href="#">仍有问题？联系我们 →</a></p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>如何联系客服？</summary>
+            <div class="answer">
+              <p>您可以通过以下方式联系我们：</p>
+              <ul>
+                <li>点击本页顶部的<strong>发送邮件联系客服</strong>按钮。</li>
+                <li>或直接发送邮件至 <a data-mailto href="#"><span data-support-email>admin@studywiseai.com</span></a>。</li>
+              </ul>
+              <p>请在邮件中说明您的设备型号、iOS 版本以及遇到的问题，以便我们更快为您提供帮助。</p>
+              <p class="faq-escalation"><a data-mailto href="#">发送邮件联系我们 →</a></p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>订阅扣款或退款如何处理？</summary>
+            <div class="answer">
+              <p>所有订阅交易均由 <strong>Apple</strong> 处理，我们无法直接操作您的 Apple ID 账户或发起退款。</p>
+              <p>如需申请退款或查询扣款详情，请通过以下官方渠道：</p>
+              <ul>
+                <li>访问 <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer">reportaproblem.apple.com</a> 提交退款申请。</li>
+                <li>或联系 <a href="https://support.apple.com/zh-cn/billing" target="_blank" rel="noopener noreferrer">Apple 支持</a>获取账单帮助。</li>
+              </ul>
+              <p>若您在 App 内遇到订阅状态显示异常（已扣款但未解锁 Pro），请先尝试<strong>恢复购买</strong>，仍未解决请联系我们并提供相关截图。</p>
+              <p class="faq-escalation"><a data-mailto href="#">仍有问题？联系我们 →</a></p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="contact-repeat" aria-labelledby="contact-repeat-heading">
+        <h2 id="contact-repeat-heading">仍未解决？</h2>
+        <p>我们的客服团队乐意为您提供进一步帮助</p>
+        <a class="btn-primary" data-mailto href="#">发送邮件联系客服</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><strong data-app-name>WordHub·华文词汇</strong></p>
+      <p>© <span data-copyright-year>2026</span> <span data-app-name>WordHub·华文词汇</span></p>
+      <p><a data-privacy-url href="#">隐私政策</a></p>
+    </footer>
+  </div>
+
+  <div class="sticky-contact" aria-label="快速联系客服">
+    <a class="btn-primary" data-mailto href="#">联系客服</a>
+  </div>
+</body>
+</html>
